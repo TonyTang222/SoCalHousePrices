@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socal House Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Area (Square Feet)</h2>
+    <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+	<h2>Bed</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bed-1" name="uiBed" value="1"/>
+		<label for="radio-bed-1">1</label>
+		<input type="radio" id="radio-bed-2" name="uiBed" value="2" checked/>
+		<label for="radio-bed-2">2</label>
+		<input type="radio" id="radio-bed-3" name="uiBed" value="3"/>
+		<label for="radio-bed-3">3</label>
+		<input type="radio" id="radio-bed-4" name="uiBed" value="4"/>
+		<label for="radio-bed-4">4</label>
+		<input type="radio" id="radio-bed-5" name="uiBed" value="5"/>
+		<label for="radio-bed-5">5</label>
+	</div>
+	</form>
+<form class="form">
+	<h2>Bath</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+		<label for="radio-bath-1">1</label>
+		<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+		<label for="radio-bath-2">2</label>
+		<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+		<label for="radio-bath-3">3</label>
+		<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+		<label for="radio-bath-4">4</label>
+		<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+		<label for="radio-bath-5">5</label>
+	</div>
+		<h2>City</h2>
+	<div>
+  <select class="location" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected="selected">Choose a City</option>
+	<option>Acton, CA</option>
+	<option>Adelanto, CA</option>
+	<option>Agoura Hills, CA</option>
+	<option>Alhambra, CA</option>
+	<option>Aliso Viejo, CA</option>
+	<option>Alpine, CA</option>
+	<option>Alta Loma, CA</option>
+	<option>Altadena, CA</option>
+	<option>Anaheim Hills, CA</option>
+	<option>Anaheim, CA</option>
+	<option>Anza, CA</option>
+	<option>Apple Valley, CA</option>
+	<option>Arcadia, CA</option>
+	<option>Arroyo Grande, CA</option>
+	<option>Atascadero, CA</option>
+	<option>Avila Beach, CA</option>
+	<option>Azusa, CA</option>
+	<option>Bakersfield, CA</option>
+	<option>Baldwin Park, CA</option>
+	<option>Banning, CA</option>
+	<option>Beaumont, CA</option>
+	<option>Bellflower, CA</option>
+	<option>Belltown, CA</option>
+	<option>Bermuda Dunes, CA</option>
+	<option>Big Bear, CA</option>
+	<option>Bloomington, CA</option>
+	<option>Bonita, CA</option>
+	<option>Bonsall, CA</option>
+	<option>Borrego Springs, CA</option>
+	<option>Brea, CA</option>
+	<option>Buena Park, CA</option>
+	<option>Burbank, CA</option>
+	<option>California City, CA</option>
+	<option>Calimesa, CA</option>
+	<option>Camarillo, CA</option>
+	<option>Cambria, CA</option>
+	<option>Campo, CA</option>
+	<option>Canyon Country, CA</option>
+	<option>Canyon Lake, CA</option>
+	<option>Carlsbad, CA</option>
+	<option>Carson, CA</option>
+	<option>Castaic, CA</option>
+	<option>Cathedral City, CA</option>
+	<option>Cayucos, CA</option>
+	<option>Chatsworth, CA</option>
+	<option>Cherry Valley, CA</option>
+	<option>Chino Hills, CA</option>
+	<option>Chino, CA</option>
+	<option>Chula Vista, CA</option>
+	<option>Claremont, CA</option>
+	<option>Coachella, CA</option>
+	<option>Colton, CA</option>
+	<option>Compton, CA</option>
+	<option>Corona, CA</option>
+	<option>Costa Mesa, CA</option>
+	<option>Coto de Caza, CA</option>
+	<option>Covina, CA</option>
+	<option>Crestline, CA</option>
+	<option>Creston, CA</option>
+	<option>Cypress, CA</option>
+	<option>Dana Point, CA</option>
+	<option>Del Mar, CA</option>
+	<option>Descanso, CA</option>
+	<option>Desert Hot Springs, CA</option>
+	<option>Diamond Bar, CA</option>
+	<option>Downey, CA</option>
+	<option>El Cajon, CA</option>
+	<option>El Monte, CA</option>
+	<option>Encinitas, CA</option>
+	<option>Encino, CA</option>
+	<option>Escondido, CA</option>
+	<option>Fallbrook, CA</option>
+	<option>Fawnskin, CA</option>
+	<option>Fillmore, CA</option>
+	<option>Fontana, CA</option>
+	<option>Fountain Valley, CA</option>
+	<option>Frazier Park, CA</option>
+	<option>Fullerton, CA</option>
+	<option>Garden Grove, CA</option>
+	<option>Gardena, CA</option>
+	<option>Glendale, CA</option>
+	<option>Glendora, CA</option>
+	<option>Granada Hills, CA</option>
+	<option>Grand Terrace, CA</option>
+	<option>Grover Beach, CA</option>
+	<option>Hacienda Heights, CA</option>
+	<option>Hawthorne, CA</option>
+	<option>Hemet, CA</option>
+	<option>Hesperia, CA</option>
+	<option>Highland, CA</option>
+	<option>Huntington Beach, CA</option>
+	<option>Huntington Park, CA</option>
+	<option>Idyllwild, CA</option>
+	<option>Imperial Beach, CA</option>
+	<option>Indian Wells, CA</option>
+	<option>Indio, CA</option>
+	<option>Inglewood, CA</option>
+	<option>Irvine, CA</option>
+	<option>Jamul, CA</option>
+	<option>Joshua Tree, CA</option>
+	<option>Julian, CA</option>
+	<option>La Crescenta, CA</option>
+	<option>La Habra Heights, CA</option>
+	<option>La Habra, CA</option>
+	<option>La Jolla, CA</option>
+	<option>La Mesa, CA</option>
+	<option>La Mirada, CA</option>
+	<option>La Puente, CA</option>
+	<option>La Quinta, CA</option>
+	<option>Ladera Ranch, CA</option>
+	<option>Laguna Beach, CA</option>
+	<option>Laguna Hills, CA</option>
+	<option>Laguna Niguel, CA</option>
+	<option>Laguna Woods, CA</option>
+	<option>Lake Arrowhead, CA</option>
+	<option>Lake Elsinore, CA</option>
+	<option>Lake Forest, CA</option>
+	<option>Lake Hughes, CA</option>
+	<option>Lakeside, CA</option>
+	<option>Lakewood, CA</option>
+	<option>Lancaster, CA</option>
+	<option>Lemon Grove, CA</option>
+	<option>Littlerock, CA</option>
+	<option>Loma Linda, CA</option>
+	<option>Lompoc, CA</option>
+	<option>Long Beach, CA</option>
+	<option>Los Angeles, CA</option>
+	<option>Los Osos, CA</option>
+	<option>Menifee, CA</option>
+	<option>Mentone, CA</option>
+	<option>Mira Loma, CA</option>
+	<option>Mission Viejo, CA</option>
+	<option>Monrovia, CA</option>
+	<option>Montebello, CA</option>
+	<option>Monterey Park, CA</option>
+	<option>Moorpark, CA</option>
+	<option>Moreno Valley, CA</option>
+	<option>Morro Bay, CA</option>
+	<option>Mountain Center, CA</option>
+	<option>Murrieta, CA</option>
+	<option>National City, CA</option>
+	<option>Newbury Park, CA</option>
+	<option>Newport Beach, CA</option>
+	<option>Nipomo, CA</option>
+	<option>Norco, CA</option>
+	<option>North Hollywood, CA</option>
+	<option>North Tustin, CA</option>
+	<option>Northridge, CA</option>
+	<option>Norwalk, CA</option>
+	<option>Nuevo, CA</option>
+	<option>Oak Hills, CA</option>
+	<option>Oak Park, CA</option>
+	<option>Oak View, CA</option>
+	<option>Oceano, CA</option>
+	<option>Oceanside, CA</option>
+	<option>Ojai, CA</option>
+	<option>Ontario, CA</option>
+	<option>Orange, CA</option>
+	<option>Oxnard, CA</option>
+	<option>Pacoima, CA</option>
+	<option>Palm Desert, CA</option>
+	<option>Palm Springs, CA</option>
+	<option>Palmdale, CA</option>
+	<option>Paramount, CA</option>
+	<option>Pasadena, CA</option>
+	<option>Paso Robles, CA</option>
+	<option>Pauma Valley, CA</option>
+	<option>Perris, CA</option>
+	<option>Phelan, CA</option>
+	<option>Pico Rivera, CA</option>
+	<option>Pine Mountain Club, CA</option>
+	<option>Pismo Beach, CA</option>
+	<option>Placentia, CA</option>
+	<option>Pomona, CA</option>
+	<option>Port Hueneme, CA</option>
+	<option>Porter Ranch, CA</option>
+	<option>Poway, CA</option>
+	<option>Ramona, CA</option>
+	<option>Rancho Cucamonga, CA</option>
+	<option>Rancho Mirage, CA</option>
+	<option>Rancho Santa Margarita, CA</option>
+	<option>Redlands, CA</option>
+	<option>Reseda, CA</option>
+	<option>Rialto, CA</option>
+	<option>Riverside, CA</option>
+	<option>Rosamond, CA</option>
+	<option>Rosemead, CA</option>
+	<option>Rowland Heights, CA</option>
+	<option>Running Springs, CA</option>
+	<option>San Bernardino, CA</option>
+	<option>San Clemente, CA</option>
+	<option>San Diego, CA</option>
+	<option>San Fernando, CA</option>
+	<option>San Gabriel, CA</option>
+	<option>San Jacinto, CA</option>
+	<option>San Juan Capistrano, CA</option>
+	<option>San Luis Obispo, CA</option>
+	<option>San Marcos, CA</option>
+	<option>San Miguel, CA</option>
+	<option>San Pedro, CA</option>
+	<option>Santa Ana, CA</option>
+	<option>Santa Barbara, CA</option>
+	<option>Santa Margarita, CA</option>
+	<option>Santa Maria, CA</option>
+	<option>Santa Paula, CA</option>
+	<option>Santee, CA</option>
+	<option>Saugus, CA</option>
+	<option>Seal Beach, CA</option>
+	<option>Sherman Oaks, CA</option>
+	<option>Simi Valley, CA</option>
+	<option>Solana Beach, CA</option>
+	<option>Spring Valley, CA</option>
+	<option>Sun City, CA</option>
+	<option>Sun Valley, CA</option>
+	<option>Sylmar, CA</option>
+	<option>Tehachapi, CA</option>
+	<option>Temecula, CA</option>
+	<option>Temple City, CA</option>
+	<option>Templeton, CA</option>
+	<option>Thousand Oaks, CA</option>
+	<option>Torrance, CA</option>
+	<option>Tujunga, CA</option>
+	<option>Tustin, CA</option>
+	<option>Upland, CA</option>
+	<option>Valencia, CA</option>
+	<option>Valley Center, CA</option>
+	<option>Van Nuys, CA</option>
+	<option>Ventura, CA</option>
+	<option>Victorville, CA</option>
+	<option>Vista, CA</option>
+	<option>Walnut, CA</option>
+	<option>West Covina, CA</option>
+	<option>West Hills, CA</option>
+	<option>Westlake Village, CA</option>
+	<option>Westminster, CA</option>
+	<option>Whittier, CA</option>
+	<option>Wildomar, CA</option>
+	<option>Winchester, CA</option>
+	<option>Winnetka, CA</option>
+	<option>Woodland Hills, CA</option>
+	<option>Wrightwood, CA</option>
+	<option>Yorba Linda, CA</option>
+	<option>Yucaipa, CA</option>
+	<option>Yucca Valley, CA</option>
+  </select>
+</div>
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+</body>
+</html>
